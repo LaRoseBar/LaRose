@@ -1,0 +1,1349 @@
+@import './normalize.css';
+
+$default-font: "Poppins", sans-serif;
+$inter-font: "Inter", sans-serif;
+
+
+/* Keyframe animation for appearing */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Keyframe animation for disappearing */
+@keyframes fadeOutScale {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+
+
+body{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: $default-font;
+}
+
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 44px;
+}
+.container1{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+.heading{
+    font-size: 64px;
+    font-weight: bold;
+    margin: 0 0 0 0;
+    text-align: center;
+    
+}
+
+.line-after-heading{
+    width: 700px;
+    height: 2px;
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 0;
+    
+}
+
+.list{
+    
+    display: grid;
+    margin: 40px auto 0 auto;
+    grid-template-columns: 1fr 1fr;
+    justify-content: end;
+    column-gap: 40px;  
+    
+    
+}
+
+.list-item{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #FFFFFF;
+    
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    h5{
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0;
+    }
+    p{
+        margin: 0;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+.list-item-with-description{
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    .list-item-description-inner{
+        display: flex;
+        justify-content: space-between;
+        h5{
+            font-size: 20px;
+            font-weight: 400;
+            margin: 0;
+        }
+        p{
+            margin: 0;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+    p{
+        margin: 10px 0 0 0;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+.items-heading-contaiter{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    position: relative;
+    .heading{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }   
+    .quantity{
+        margin-left: auto;
+        margin-bottom: auto;
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+.section-heading{
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .section-heading-inner{
+        padding: 25px 255px;
+            
+        border: 1px solid #FFFFFF;
+        h2{
+            font-family: $default-font;
+            font-weight: 500;
+            font-size: 36px;
+        }
+        p{
+            font-family: $default-font;
+            font-weight: 300;
+            font-size: 18px;
+            max-width: 355px;
+        }
+    }
+}
+
+
+header{
+    position: sticky;
+    top: 0;
+    margin-top: 20px;
+    background-color: #000000;
+    z-index: 1000;
+    .header-inner{
+        max-width: 1600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            width: 362px;
+            height: 105px;
+        }
+        /* NAV DESKTOP */
+        .nav-desktop{
+
+            
+            ul{
+                list-style: none;
+                margin:0;
+                padding: 0;
+                display: flex;
+                column-gap: 40px;
+        
+                li{
+                    font-family: $inter-font;
+                    text-transform: uppercase;
+                    font-size: 24px;
+                    font-weight: 500;
+        
+                    a{
+                        text-decoration: none;
+                        color: #FFFFFF;
+                    
+                    }
+                }
+            }
+        
+        }
+        /* BURGER */
+        .burger-menu{
+            padding-top: 1px;
+            
+            width: 30px;
+            height: 20px;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            position: relative;
+            display: none;
+
+            .line{
+                line-height: 20px; 
+                display: block;
+                box-sizing: border-box;
+                height: 3px;
+                background-color: rgb(153, 153, 153);
+                border-radius: 3px;
+                transition: all 0.3s ease;
+                width: 100%;
+                
+            }
+            .line1 {
+                transform: rotate(0);
+            }
+            .line2 {
+                transform: rotate(0);
+            }
+
+    
+        }
+        .burger-menu.active{
+            .line1 {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+            .line2 {
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+        }
+    }
+    /* MOBILE MENU */
+    .mobile-menu{         
+        list-style: none;
+        margin:0;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 0;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        row-gap: 20px;
+        li {
+            font-family: $inter-font;
+            
+            font-size: 36px;
+            font-weight: 500;
+            animation: fadeInScale 0.5s ease forwards;
+            a{
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+        }
+        .disappearing {
+            animation: fadeOutScale 0.3s ease forwards;
+        }
+    }
+}
+
+
+
+
+.drinks{
+    margin-top: 20px;
+    position: relative;
+    .drinks-section{
+
+        .shots{
+            margin: 100px 0 80px 0;
+            display: flex;
+            img{
+                width: 100%;
+                max-width: 760px;
+                height: 570px;
+                object-fit: cover;
+            }
+            .shots-items{
+                margin: auto auto;
+                .rosado{
+                    font-size: 19px;
+                }
+            }
+        }
+        .whiskey{
+            margin: 0 0 80px 0;
+            display: flex;
+            justify-content: end;
+            img{
+                width: 100%;
+                max-width: 614px;
+                height: 713px;
+                object-fit: cover;
+            }
+            .whiskey-items{
+                margin: auto auto;
+            }
+        }
+        .beer{
+            margin: 0 0 80px 0;
+            display: flex;
+            img{
+                width: 100%;
+                max-width: 625px;
+                height: 683px;
+                object-fit: cover;
+            }
+            .beer-items{
+                margin: auto auto;
+            }
+        }
+        .gin-tonic{
+            margin: 0 0 80px 0;
+            display: flex;
+            justify-content: end;
+            img{
+                width: 100%;
+                max-width: 733px;
+                height: 733px;
+                object-fit: cover;
+            }
+            .gin-tonic-items{
+                margin: auto auto;
+            }
+        }
+        .rum{
+            margin: 0 0 80px 0;
+            display: flex;
+            img{
+                width: 100%;
+                max-width: 658px;
+                height: 819px;
+                object-fit: cover;
+            }
+            .rum-items{
+                margin: auto auto;
+                .list{
+                    grid-template-columns: 1fr;
+                    place-items: center;
+                    .list-item{
+                        width: 330px;
+                    }
+                }
+                .line-after-heading{
+                    margin-top: 20px;
+                }
+            }
+            
+        }
+        .vodka{
+            margin: 0 0 80px 0;
+            display: flex;
+            img{
+                width: 100%;
+                max-width: 715px;
+                height: 817px;
+                object-fit: cover;
+            }
+            .vodka-items{
+                margin: auto auto;
+                .list{
+                    grid-template-columns: 1fr;
+                    place-items: center;
+                    .list-item{
+                        width: 330px;
+                    }
+                }
+                .line-after-heading{
+                    margin-top: 20px;
+                }
+            }
+        }
+        .cognac{
+            margin: 0 0 80px 0;
+            display: flex;
+            img{
+                width: 100%;
+                max-width: 694px;
+                height: 873px;
+                object-fit: cover;
+            }
+            .cognac-items{
+                margin: auto auto;
+                .list{
+                    grid-template-columns: 1fr;
+                    place-items: center;
+                    .list-item{
+                        width: 330px;
+                    }
+                }
+                .line-after-heading{
+                    margin-top: 20px;
+                }
+                .cognac-items-heading-contaiter{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .whiteWine{
+            margin: 0 0 80px 0;
+            display: flex;
+            img{
+                width: 100%;
+                max-width: 763px;
+                height: 763px;
+                object-fit: cover;
+            }
+            .whiteWine-items{
+                margin: auto auto;
+                .list{
+                    grid-template-columns: 1fr;
+                    place-items: center;
+                    .list-item-with-description{
+                        width: 330px;
+                    }
+                }
+                .line-after-heading{
+                    margin-top: 20px;
+                }
+                .whiteWine-heading{
+                    .heading{
+                        position: absolute;
+                        left: 46%;
+                        transform: translateX(-45%);
+                    }   
+                }
+            }
+        }
+        .redWine{
+            margin: 0 0 80px 0;
+            display: flex;
+            img{
+                width: 100%;
+                max-width: 689px;
+                height: 940px;
+                object-fit: cover;
+            }
+            .redWine-items{
+                margin: auto auto;
+                .list{
+                    grid-template-columns: 1fr;
+                    place-items: center;
+                    .list-item-with-description{
+                        width: 330px;
+                    }
+                }
+                .line-after-heading{
+                    margin-top: 20px;
+                }
+            }
+        }
+        .cava{
+            margin: 0 0 80px 0;
+            display: flex;
+            img{
+                width: 100%;
+                max-width: 700px;
+                height: 980px;
+                object-fit: cover;
+            }
+            .cava-items{
+                margin: auto auto;
+                .list{
+                    grid-template-columns: 1fr;
+                    place-items: center;
+                    .list-item-with-description{
+                        width: 330px;
+                    }
+                }
+                .line-after-heading{
+                    margin-top: 20px;
+                }
+            }
+        }
+        .refreshings{
+            margin: 0 0 80px 0;
+            display: flex;
+            img{
+                width: 100%;
+                max-width: 702px;
+                height: 935px;
+                object-fit: cover;
+            }
+            .refreshings-items{
+                margin: auto auto;
+                .line-after-heading{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+.drinks::before {
+    content: '';
+    display: block;
+    height: 25vh;
+    margin-top: -25vh;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.shishas{
+    margin-bottom: 80px;
+    position: relative;
+    
+    .shisha{
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+        
+        max-width: 330px;
+        width: 330px;
+        color: #555555;
+        background-color: #FFFFFF;
+        padding: 30px 0;
+        border-radius: 20px;
+        .shisha-heading{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: $inter-font;
+            
+            margin-right: 30px;
+            margin-left: 30px;
+            color: #000000;
+            h6{
+                margin: 0;
+                font-size: 22px;
+                font-weight: 700;
+                max-width: 211px;
+            }
+            p{
+                margin: 0;
+                font-size: 22px;
+                font-weight: 700;
+            }
+        }
+        .tobacco{
+            font-size: 14px;
+            font-weight: 300;
+            color: #666666;
+            margin: 15px 0 0 0;
+            margin-left: 30px;
+            max-width: 250px;
+            line-height: 250%;
+        }
+        hr{
+            max-width: 270px;
+            border: 1px solid #E3E3E3;
+            margin: 20px auto;
+        }
+        .consist{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            gap: 10px;
+            padding-left: 30px;
+            max-width: 290px;
+            p{
+                font-size: 16px;
+                font-weight: 500;
+                background-color: #e3e3e337;
+                max-width: fit-content;
+                padding: 8px 10px 8px 10px;
+                border-radius: 10px;
+                margin: 0;
+                line-height: 150%;
+            }
+        }
+        img{
+            width: 269px;
+            border-radius: 20px;
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+
+    }
+
+
+    .shishas-section{
+        margin-top: 100px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap; 
+        column-gap: 100px; 
+        row-gap: 30px;
+        align-items: flex-start; 
+    }
+}
+.shishas::before {
+    content: '';
+    display: block;
+    height: 25vh;
+    margin-top: -25vh;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.cocktails{
+    position: relative;
+    .cocktails-section{
+        margin-top: 100px;
+        .cocktails-drink{
+            margin: 0 0 80px 0;
+            display: flex;
+            img{
+                width: 100%;
+                max-width: 736px;
+                height: 1082px;
+                object-fit: cover;
+                
+            }
+            .cocktails-drink-items{
+                margin: auto auto;
+                .list{
+                    grid-template-columns: 1fr 1fr ;
+                    place-items: center;
+                    .list-item-with-description{
+                        width: 330px;
+                    }
+                    .mojito10{
+                        font-size: 11px;
+                    }
+                }
+                .line-after-heading{
+                    margin-top: 20px;
+                }
+            }
+    
+        }
+
+        .cocktailsWithoutAlco{
+            margin: 0 0 100px 0;
+            display: flex;
+            img{
+                width: 100%;
+                max-width: 730px;
+                height: 886px;
+                object-fit: cover;
+                
+            }
+            .cocktailsWithoutAlco-items{
+                margin: auto auto;
+                .list{
+                    grid-template-columns: 1fr;
+                    place-items: center;
+                    .list-item-with-description{
+                        width: 330px;
+                    }
+                    .mojito10{
+                        font-size: 11px;
+                    }
+                }
+                .line-after-heading{
+                    margin-top: 20px;
+                }
+            }
+        }
+
+    }
+}
+.cocktails::before {
+    content: '';
+    display: block;
+    height: 25vh;
+    margin-top: -25vh;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+.food{
+    margin-bottom: 130px;
+    position: relative;
+    .section-heading{
+        .section-heading-inner{
+            border: 3px solid #FFFFFF;
+        }
+        .menu-btn{
+            text-decoration: none;
+            color: #FFFFFF;
+            .dowloadMenu{
+                font-size: 30px;
+                font-weight: normal;
+                margin: 20px 0 23px 0;
+            }
+        }
+    }
+}
+.food::before {
+    content: '';
+    display: block;
+    height: 25vh;
+    margin-top: -25vh;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.contact{
+    margin-bottom: 60px;
+    .contactUsH2{
+        letter-spacing:  .2rem;
+    }
+    
+    .contact-section{
+        margin-top: 50px;
+        h3{
+            margin: 0 auto;
+            max-width: fit-content;
+            font-size: 36px;
+            font-weight: 400;
+        }
+        .phoneNumbers{
+            display: flex;
+            justify-content: center;
+            column-gap: 300px;
+            p{
+                font-weight: 500;
+                font-size: 32px;  
+                margin-bottom: 0;
+                font-family: $inter-font;
+            }
+         
+        } 
+        .contact-line{
+            width: 330px;
+            display: none;
+            background-color: #fff;
+        }
+        .mapContainer{
+            display: flex;
+            justify-content: center;
+            column-gap: 260px;
+            margin: 50px 0 100px 0;
+            .barName{
+                font-size: 16px;
+                font-weight: 400;
+                max-width: fit-content;
+                margin: 0 auto 25px auto;
+            }
+        }
+        .social{
+            .socialContainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 50px;
+                p{
+                    font-size: 32px;
+                    font-weight: 400;
+                }
+                .insta{
+                    width: 120px;
+                }
+                .whatsapp{
+                    width: 120px;
+                }
+            }
+        }
+    }
+
+}
+.contact::before {
+    content: '';
+    display: block;
+    height: 25vh;
+    margin-top: -25vh;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+
+.downfoot{
+    display: none;
+    width: 100%;
+    align-items: end;
+    justify-content: center;
+    
+    padding-bottom: 30px;
+    padding-top: 30px;
+   
+    background-color: #000000;
+    z-index: 1000;
+    a{
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    .downfoot-card{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        img{
+            object-fit: none;
+        }
+        .downfoot-cocktail{
+            margin-right: 10px;
+        }
+        .downfoot-shisha{
+            margin-left: 7px;
+        }
+        p{
+            margin: 0;
+
+        }
+    }
+}
+
+
+/* MEDIA 1500 */
+@media(max-width:1500px){
+    .shots{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+    .whiskey{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .whiskey-items{
+            order: 1;
+        }
+    }
+    .beer{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+    .gin-tonic{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .gin-tonic-items{
+            order: 1;
+        }
+    }
+    .rum{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+    .vodka{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .vodka-items{
+            order: 1;
+        }
+    }
+    .cognac{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+    .whiteWine{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .whiteWine-items{
+            order: 1;
+        }
+    }
+    .redWine{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+    .cava{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .cava-items{
+            order: 1;
+        }
+    }
+    .refreshings{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+    .cocktails-drink{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+
+    .cocktailsWithoutAlco{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .cocktailsWithoutAlco-items{
+            order: 1;
+        }
+    }
+ 
+}
+
+/* MEDIA 1125 */
+@media(max-width:1125px){
+    header{
+        position:relative;
+        
+        .header-inner{
+            .nav-desktop{
+                ul{
+                    li{
+                        display: none;
+                    }
+                }
+            }
+            .burger-menu{
+                display: flex;
+            }
+        }
+
+    }
+
+    .drinks{
+        .drinks-heading{
+            .drinks-heading-inner{
+                padding: 25px 255px;
+            }
+        }
+
+    }
+    .contact{
+        margin-bottom: 0;
+        .contact-section{
+            .contact-line{
+                display: block;
+                margin: 50px auto 50px auto;
+
+            }
+            .last-line{
+                margin-bottom: 0;
+            }
+            
+            h3{
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .phoneNumbers{
+                flex-direction: column;
+                margin: 0 auto;
+                max-width: fit-content;
+                p{
+                    font-size: 22px;
+                }
+            }
+            .mapContainer{
+                flex-direction: column;
+                margin: 0 auto;
+                max-width: fit-content;
+                .new{
+                    margin-top: 50px;
+                }
+            }
+            .social{
+                .socialContainer{
+                    column-gap: 20px;
+                    p{
+                        font-size: 16px;
+                    }
+                    .insta{
+                        width: 48px;
+                    } 
+                    .whatsapp{
+                        width: 48px;
+                    }                    
+                }
+
+            }
+           
+        }
+    }
+    .downfoot{
+        display: flex;
+        position: sticky;
+        bottom: 0;
+        column-gap: 70px;
+    }
+
+}
+
+/* MEDIA 830 */
+@media(max-width:830px){
+    
+    .container{
+        max-width: 330px;
+        padding: 0;
+    }
+    .container1{
+        max-width: 330px;
+    }
+    .heading{
+        font-size: 22px;
+        text-align: start;
+    }
+    .line-after-heading{
+        width: 330px;
+        margin-top: 20px;
+    }
+    .list{
+        grid-template-columns: 1fr;
+        margin: 20px auto 0 auto;
+    }
+    .list-item{
+        h5{
+            font-size: 16px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    .list-item-with-description{
+        .list-item-description-inner{
+            h5{
+                font-size: 16px;
+            }
+            p{ 
+                font-size: 16px;
+            }
+        }
+        p{
+            font-size: 14px; 
+        }
+    }
+
+
+    .items-heading-contaiter{
+        align-items: end;
+        position: initial;
+        .heading{
+            position:initial;
+            transform: none;
+
+        }
+        .quantity{
+            font-size: 16px;
+        }
+    }
+
+    header{
+        .header-inner{
+            .logo{
+                width: 120px;
+                height: 36px;
+            }
+        }
+        .mobile-menu{      
+            margin-bottom: 0;   
+            text-align: start;
+            li{
+                font-size: 28px;
+            }
+        }
+    }
+
+    .section-heading{
+        .section-heading-inner{
+            padding: 13px 68px;
+        
+            border: 1px solid #FFFFFF;
+            h2{
+                font-family: $default-font;
+                font-weight: 500;
+                font-size: 24px;
+            }
+            p{
+                font-family: $default-font;
+                font-weight: 300;
+                font-size: 14px;
+            }
+        }
+    }
+    .drinks{
+        margin-top: 20px;
+
+        .drinks-section{
+            .shots{
+                margin: 50px 0 30px 0;
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 221px;
+                    object-fit: cover;
+                    margin-bottom: 20px;
+                }
+                .shots-items{
+                    margin: auto auto;
+                    .rosado{
+                        font-size: 16px;
+                    }
+                }
+            }
+            .whiskey{
+                margin: 0 0 50px 0;
+                display: flex;
+                justify-content: end;
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 382px;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
+                .whiskey-items{
+                    margin: auto auto;
+                }
+            }
+            .beer{
+                margin: 0 0 50px 0;
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 437px;
+                    object-fit: cover;
+                    margin-bottom: 20px;
+                }
+                .beer-items{
+                    margin: auto auto;
+                }
+            }
+            .gin-tonic{
+                margin: 0 0 50px 0;
+                display: flex;
+                justify-content: end;
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 382px;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
+                .gin-tonic-items{
+                    margin: auto auto;
+                }
+            }
+            .rum{
+                margin: 0 0 50px 0;
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 437px;
+                    object-fit: cover;
+                    margin-bottom: 20px;
+                }
+                .rum-items{
+                    margin: auto auto;
+                }
+            }
+            .vodka{
+                margin: 0 0 50px 0;
+                display: flex;
+                justify-content: end;
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 250px;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
+                .vodka-items{
+                    margin: auto auto;
+                }
+            }
+            .cognac{
+                margin: 0 0 50px 0;
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 451px;
+                    object-fit: cover;
+                    margin-bottom: 20px;
+                }
+                .cognac-items{
+                    margin: auto auto;
+                    .cognac-items-heading-contaiter{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .whiteWine{
+                margin: 0 0 50px 0;
+                display: flex;
+                justify-content: end;
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 477px;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
+                .whiteWine-items{
+                    margin: auto auto;
+                    .whiteWine-heading{
+                        .heading{
+                            position:initial;
+                            transform: none;
+                        }   
+                    }
+                }
+            }
+            .redWine{
+                margin: 0 0 50px 0;
+                display: flex;
+                justify-content: end;
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 449px;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
+                .redWine-items{
+                    margin: auto auto;
+                }
+            }
+            .cava{
+                margin: 0 0 50px 0;
+                display: flex;
+                justify-content: end;
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 461px;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
+                .redWine-items{
+                    margin: auto auto;
+                }
+            }
+            .refreshings{
+                margin: 0 0 50px 0;
+                display: flex;
+                justify-content: end;
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 449px;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
+                .refreshings-items{
+                    margin: auto auto;
+                }
+            }
+        }
+    }
+    .shishas{
+        .shishas-section{
+            margin-top: 50px;
+        }
+    }
+
+    .cocktails{
+        margin-top: 20px;
+        .cocktails-section{
+            margin-top: 50px;
+            .cocktails-drink{
+                margin: 0 0 50px 0;
+                display: flex;
+                justify-content: end;
+               
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 259px;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
+                .cocktails-drink-items{
+                    margin: auto auto;
+                    .list{
+                        grid-template-columns: 1fr ;
+                    }
+                }
+            }
+
+            .cocktailsWithoutAlco{
+                margin: 0 0 50px 0;
+                display: flex;
+                justify-content: end;
+               
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 400px;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
+                .cocktails-drink-items{
+                    margin: auto auto;
+                }
+            }
+        }
+    }
+
+    .downfoot{
+        position: sticky;
+        bottom: 0;
+        column-gap: 17px;
+    }
+    
+}
