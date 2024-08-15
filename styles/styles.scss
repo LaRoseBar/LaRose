@@ -52,7 +52,6 @@ body{
     font-weight: bold;
     margin: 0 0 0 0;
     text-align: center;
-    
 }
 
 .line-after-heading{
@@ -61,25 +60,20 @@ body{
     background-color: #FFFFFF;
     margin-top: 10px;
     margin-bottom: 0;
-    
 }
 
 .list{
-    
     display: grid;
     margin: 40px auto 0 auto;
     grid-template-columns: 1fr 1fr;
     justify-content: end;
-    column-gap: 40px;  
-    
-    
+    column-gap: 40px;
 }
 
 .list-item{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #FFFFFF;
-    
     margin-bottom: 18px;
     padding-bottom: 18px;
     h5{
@@ -144,7 +138,6 @@ body{
     width: 100%;
     .section-heading-inner{
         padding: 25px 255px;
-            
         border: 1px solid #FFFFFF;
         h2{
             font-family: $default-font;
@@ -178,8 +171,6 @@ header{
         }
         /* NAV DESKTOP */
         .nav-desktop{
-
-            
             ul{
                 list-style: none;
                 margin:0;
@@ -196,16 +187,13 @@ header{
                     a{
                         text-decoration: none;
                         color: #FFFFFF;
-                    
                     }
                 }
             }
-        
         }
         /* BURGER */
         .burger-menu{
             padding-top: 1px;
-            
             width: 30px;
             height: 20px;
             box-sizing: border-box;
@@ -224,7 +212,6 @@ header{
                 border-radius: 3px;
                 transition: all 0.3s ease;
                 width: 100%;
-                
             }
             .line1 {
                 transform: rotate(0);
@@ -232,8 +219,6 @@ header{
             .line2 {
                 transform: rotate(0);
             }
-
-    
         }
         .burger-menu.active{
             .line1 {
@@ -247,8 +232,8 @@ header{
     /* MOBILE MENU */
     .mobile-menu{         
         list-style: none;
-        margin:0;
-        margin-top: 20px;
+        margin: 0;
+        
         margin-bottom: 30px;
         padding: 0;
         display: flex;
@@ -274,9 +259,9 @@ header{
 
 
 
-
+/* DRINKS SECTION */
 .drinks{
-    margin-top: 20px;
+    margin-top: 70px;
     position: relative;
     .drinks-section{
 
@@ -358,8 +343,7 @@ header{
                 .line-after-heading{
                     margin-top: 20px;
                 }
-            }
-            
+            }   
         }
         .vodka{
             margin: 0 0 80px 0;
@@ -513,15 +497,22 @@ header{
     pointer-events: none;
 }
 
+/* SHISHAS SECTION */
 .shishas{
     margin-bottom: 80px;
     position: relative;
-    
+    .shisha-main-img{
+        width: 100%;
+        max-width: 330px;
+        height: 394px;
+        margin: 0 auto;
+        display: none;
+        object-fit: cover;
+    }
     .shisha{
         flex-grow: 0;
         flex-shrink: 0;
         flex-basis: auto;
-        
         max-width: 330px;
         width: 330px;
         color: #555555;
@@ -533,7 +524,6 @@ header{
             align-items: center;
             justify-content: space-between;
             font-family: $inter-font;
-            
             margin-right: 30px;
             margin-left: 30px;
             color: #000000;
@@ -587,10 +577,7 @@ header{
             margin-left: 30px;
             margin-top: 20px;
         }
-
     }
-
-
     .shishas-section{
         margin-top: 100px;
         justify-content: center;
@@ -610,6 +597,7 @@ header{
     pointer-events: none;
 }
 
+/* COCKTAILS SECTION */
 .cocktails{
     position: relative;
     .cocktails-section{
@@ -642,7 +630,6 @@ header{
             }
     
         }
-
         .cocktailsWithoutAlco{
             margin: 0 0 100px 0;
             display: flex;
@@ -651,7 +638,6 @@ header{
                 max-width: 730px;
                 height: 886px;
                 object-fit: cover;
-                
             }
             .cocktailsWithoutAlco-items{
                 margin: auto auto;
@@ -682,7 +668,7 @@ header{
     pointer-events: none;
 }
 
-
+/* MENU SECTION */
 .food{
     margin-bottom: 130px;
     position: relative;
@@ -710,12 +696,12 @@ header{
     pointer-events: none;
 }
 
+/* CONTACT SECTION */
 .contact{
     margin-bottom: 60px;
     .contactUsH2{
         letter-spacing:  .2rem;
     }
-    
     .contact-section{
         margin-top: 50px;
         h3{
@@ -734,7 +720,6 @@ header{
                 margin-bottom: 0;
                 font-family: $inter-font;
             }
-         
         } 
         .contact-line{
             width: 330px;
@@ -783,17 +768,14 @@ header{
     pointer-events: none;
 }
 
-
-
+/* FOOTER */
 .downfoot{
     display: none;
     width: 100%;
     align-items: end;
     justify-content: center;
-    
     padding-bottom: 30px;
     padding-top: 30px;
-   
     background-color: #000000;
     z-index: 1000;
     a{
@@ -924,7 +906,6 @@ header{
             margin-bottom: 30px;
         }
     }
-
     .cocktailsWithoutAlco{
         flex-direction: column;
         img{
@@ -935,14 +916,14 @@ header{
             order: 1;
         }
     }
- 
 }
+
 
 /* MEDIA 1125 */
 @media(max-width:1125px){
+
     header{
         position:relative;
-        
         .header-inner{
             .nav-desktop{
                 ul{
@@ -955,16 +936,26 @@ header{
                 display: flex;
             }
         }
-
+        .mobile-menu{
+            margin-top: 10px;
+        }
     }
-
     .drinks{
+        margin-top: 0;
         .drinks-heading{
             .drinks-heading-inner{
                 padding: 25px 255px;
             }
         }
-
+    }
+    .shishas{
+        .shisha-main-img{
+            margin: 50px auto 0 auto;
+            display: block;
+        }
+        .shishas-section{
+            margin-top: 50px;
+        }
     }
     .contact{
         margin-bottom: 0;
@@ -972,7 +963,6 @@ header{
             .contact-line{
                 display: block;
                 margin: 50px auto 50px auto;
-
             }
             .last-line{
                 margin-bottom: 0;
@@ -1011,9 +1001,7 @@ header{
                         width: 48px;
                     }                    
                 }
-
             }
-           
         }
     }
     .downfoot{
@@ -1022,7 +1010,6 @@ header{
         bottom: 0;
         column-gap: 70px;
     }
-
 }
 
 /* MEDIA 830 */
@@ -1069,14 +1056,12 @@ header{
         }
     }
 
-
     .items-heading-contaiter{
         align-items: end;
         position: initial;
         .heading{
             position:initial;
             transform: none;
-
         }
         .quantity{
             font-size: 16px;
@@ -1118,7 +1103,6 @@ header{
     }
     .drinks{
         margin-top: 20px;
-
         .drinks-section{
             .shots{
                 margin: 50px 0 30px 0;
@@ -1305,7 +1289,6 @@ header{
                 margin: 0 0 50px 0;
                 display: flex;
                 justify-content: end;
-               
                 img{
                     width: 100%;
                     max-width: 330px;
@@ -1325,7 +1308,6 @@ header{
                 margin: 0 0 50px 0;
                 display: flex;
                 justify-content: end;
-               
                 img{
                     width: 100%;
                     max-width: 330px;
@@ -1343,7 +1325,6 @@ header{
     .downfoot{
         position: sticky;
         bottom: 0;
-        column-gap: 17px;
-    }
-    
+        column-gap: 22px;
+    } 
 }

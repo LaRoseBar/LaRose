@@ -218,7 +218,6 @@ header .header-inner .burger-menu.active .line2 {
 header .mobile-menu {
   list-style: none;
   margin: 0;
-  margin-top: 20px;
   margin-bottom: 30px;
   padding: 0;
   display: flex;
@@ -240,8 +239,9 @@ header .mobile-menu .disappearing {
   animation: fadeOutScale 0.3s ease forwards;
 }
 
+/* DRINKS SECTION */
 .drinks {
-  margin-top: 20px;
+  margin-top: 70px;
   position: relative;
 }
 .drinks .drinks-section .shots {
@@ -473,9 +473,18 @@ header .mobile-menu .disappearing {
   pointer-events: none;
 }
 
+/* SHISHAS SECTION */
 .shishas {
   margin-bottom: 80px;
   position: relative;
+}
+.shishas .shisha-main-img {
+  width: 100%;
+  max-width: 330px;
+  height: 394px;
+  margin: 0 auto;
+  display: none;
+  object-fit: cover;
 }
 .shishas .shisha {
   flex-grow: 0;
@@ -565,6 +574,7 @@ header .mobile-menu .disappearing {
   pointer-events: none;
 }
 
+/* COCKTAILS SECTION */
 .cocktails {
   position: relative;
 }
@@ -633,6 +643,7 @@ header .mobile-menu .disappearing {
   pointer-events: none;
 }
 
+/* MENU SECTION */
 .food {
   margin-bottom: 130px;
   position: relative;
@@ -659,6 +670,7 @@ header .mobile-menu .disappearing {
   pointer-events: none;
 }
 
+/* CONTACT SECTION */
 .contact {
   margin-bottom: 60px;
 }
@@ -728,6 +740,7 @@ header .mobile-menu .disappearing {
   pointer-events: none;
 }
 
+/* FOOTER */
 .downfoot {
   display: none;
   width: 100%;
@@ -885,8 +898,21 @@ header .mobile-menu .disappearing {
   header .header-inner .burger-menu {
     display: flex;
   }
+  header .mobile-menu {
+    margin-top: 10px;
+  }
+  .drinks {
+    margin-top: 0;
+  }
   .drinks .drinks-heading .drinks-heading-inner {
     padding: 25px 255px;
+  }
+  .shishas .shisha-main-img {
+    margin: 50px auto 0 auto;
+    display: block;
+  }
+  .shishas .shishas-section {
+    margin-top: 50px;
   }
   .contact {
     margin-bottom: 0;
@@ -1224,7 +1250,7 @@ header .mobile-menu .disappearing {
   .downfoot {
     position: sticky;
     bottom: 0;
-    column-gap: 17px;
+    column-gap: 22px;
   }
 }
 
