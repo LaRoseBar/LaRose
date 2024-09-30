@@ -387,7 +387,6 @@ header .mobile-menu .disappearing {
   margin: auto auto;
 }
 .drinks .drinks-section .whiteWine .whiteWine-items .list {
-  grid-template-columns: 1fr;
   place-items: center;
 }
 .drinks .drinks-section .whiteWine .whiteWine-items .list .list-item-with-description {
@@ -397,6 +396,34 @@ header .mobile-menu .disappearing {
   margin-top: 20px;
 }
 .drinks .drinks-section .whiteWine .whiteWine-items .whiteWine-heading .heading {
+  position: absolute;
+  left: 46%;
+  transform: translateX(-45%);
+}
+.drinks .drinks-section .roseWine {
+  margin: 0 0 80px 0;
+  display: flex;
+}
+.drinks .drinks-section .roseWine img {
+  width: 100%;
+  max-width: 763px;
+  height: 763px;
+  object-fit: cover;
+}
+.drinks .drinks-section .roseWine .roseWine-items {
+  margin: auto auto;
+}
+.drinks .drinks-section .roseWine .roseWine-items .list {
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+.drinks .drinks-section .roseWine .roseWine-items .list .list-item-with-description {
+  width: 330px;
+}
+.drinks .drinks-section .roseWine .roseWine-items .line-after-heading {
+  margin-top: 20px;
+}
+.drinks .drinks-section .roseWine .roseWine-items .roseWine-heading .heading {
   position: absolute;
   left: 46%;
   transform: translateX(-45%);
@@ -415,7 +442,6 @@ header .mobile-menu .disappearing {
   margin: auto auto;
 }
 .drinks .drinks-section .redWine .redWine-items .list {
-  grid-template-columns: 1fr;
   place-items: center;
 }
 .drinks .drinks-section .redWine .redWine-items .list .list-item-with-description {
@@ -852,6 +878,16 @@ header .mobile-menu .disappearing {
     margin: 0 auto;
     margin-bottom: 30px;
   }
+  .roseWine {
+    flex-direction: column;
+  }
+  .roseWine img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .roseWine .roseWine-items {
+    order: 1;
+  }
   .cava {
     flex-direction: column;
   }
@@ -868,6 +904,9 @@ header .mobile-menu .disappearing {
   .refreshings img {
     margin: 0 auto;
     margin-bottom: 30px;
+  }
+  .refreshings .refreshings-items {
+    order: 1;
   }
   .cocktails-drink {
     flex-direction: column;
@@ -1174,6 +1213,25 @@ header .mobile-menu .disappearing {
   }
   .drinks .drinks-section .redWine .redWine-items {
     margin: auto auto;
+  }
+  .drinks .drinks-section .roseWine {
+    margin: 0 0 50px 0;
+    display: flex;
+    justify-content: end;
+  }
+  .drinks .drinks-section .roseWine img {
+    width: 100%;
+    max-width: 330px;
+    height: 477px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .drinks .drinks-section .roseWine .roseWine-items {
+    margin: auto auto;
+  }
+  .drinks .drinks-section .roseWine .roseWine-items .roseWine-heading .heading {
+    position: initial;
+    transform: none;
   }
   .drinks .drinks-section .cava {
     margin: 0 0 50px 0;

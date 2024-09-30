@@ -406,7 +406,7 @@ header{
             .whiteWine-items{
                 margin: auto auto;
                 .list{
-                    grid-template-columns: 1fr;
+                    
                     place-items: center;
                     .list-item-with-description{
                         width: 330px;
@@ -416,6 +416,36 @@ header{
                     margin-top: 20px;
                 }
                 .whiteWine-heading{
+                    .heading{
+                        position: absolute;
+                        left: 46%;
+                        transform: translateX(-45%);
+                    }   
+                }
+            }
+        }
+        .roseWine{
+            margin: 0 0 80px 0;
+            display: flex;
+            img{
+                width: 100%;
+                max-width: 763px;
+                height: 763px;
+                object-fit: cover;
+            }
+            .roseWine-items{
+                margin: auto auto;
+                .list{
+                    grid-template-columns: 1fr;
+                    place-items: center;
+                    .list-item-with-description{
+                        width: 330px;
+                    }
+                }
+                .line-after-heading{
+                    margin-top: 20px;
+                }
+                .roseWine-heading{
                     .heading{
                         position: absolute;
                         left: 46%;
@@ -436,7 +466,7 @@ header{
             .redWine-items{
                 margin: auto auto;
                 .list{
-                    grid-template-columns: 1fr;
+                    
                     place-items: center;
                     .list-item-with-description{
                         width: 330px;
@@ -875,11 +905,22 @@ header{
             order: 1;
         }
     }
+    
     .redWine{
         flex-direction: column;
         img{
             margin: 0 auto;
             margin-bottom: 30px;
+        }
+    }
+    .roseWine{
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .roseWine-items{
+            order: 1;
         }
     }
     .cava{
@@ -897,6 +938,9 @@ header{
         img{
             margin: 0 auto;
             margin-bottom: 30px;
+        }
+        .refreshings-items{
+            order: 1;
         }
     }
     .cocktails-drink{
@@ -1241,6 +1285,27 @@ header{
                 }
                 .redWine-items{
                     margin: auto auto;
+                }
+            }
+            .roseWine{
+                margin: 0 0 50px 0;
+                display: flex;
+                justify-content: end;
+                img{
+                    width: 100%;
+                    max-width: 330px;
+                    height: 477px;
+                    object-fit: cover;
+                    overflow: hidden;
+                }
+                .roseWine-items{
+                    margin: auto auto;
+                    .roseWine-heading{
+                        .heading{
+                            position:initial;
+                            transform: none;
+                        }   
+                    }
                 }
             }
             .cava{

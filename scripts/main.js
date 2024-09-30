@@ -46,12 +46,12 @@ function burgerMenu() {
             newCocktails.appendChild(newCocktailsLink) 
 
             /* creating and appending MENU ELEMENT IN MOBILE NAV */
-            const newMenu = document.createElement('li');
+            /* const newMenu = document.createElement('li');
             const newMenuLink = document.createElement('a')
             newMenuLink.textContent = 'Menu'
             newMenuLink.href = '#food-id'
             newMenu.id = 'menu'
-            newMenu.appendChild(newMenuLink)            
+            newMenu.appendChild(newMenuLink) */            
               
             /* creating and appending CONTACT element in mobile nav */
             const newContact = document.createElement('li');
@@ -65,7 +65,7 @@ function burgerMenu() {
             navMobile.appendChild(newDrinks)
             navMobile.appendChild(newShishas)
             navMobile.appendChild(newCocktails)
-            navMobile.appendChild(newMenu)
+            /* navMobile.appendChild(newMenu) */
             navMobile.appendChild(newContact)
             
     
@@ -74,15 +74,15 @@ function burgerMenu() {
             const newDrinks = document.querySelector('#drinks');
             const newShishas = document.querySelector('#shishas');
             const newCocktails = document.querySelector('#cocktails');
-            const newMenu = document.querySelector('#menu');
+            /* const newMenu = document.querySelector('#menu'); */
             const newContact = document.querySelector('#contact');
 
-            if(newDrinks && newShishas && newCocktails && newContact && newMenu){
+            if(newDrinks && newShishas && newCocktails && newContact /* && newMenu */){
                 newDrinks.classList.add('disappearing');
                 newShishas.classList.add('disappearing');
                 newCocktails.classList.add('disappearing');
                 newContact.classList.add('disappearing');
-                newMenu.classList.add('disappearing');
+                /* newMenu.classList.add('disappearing'); */
             }
             newDrinks.addEventListener('animationend', function() {
                 navMobile.removeChild(newDrinks);
@@ -96,9 +96,9 @@ function burgerMenu() {
             newContact.addEventListener('animationend', function() {
                 navMobile.removeChild(newContact);
             });
-            newMenu.addEventListener('animationend', function() {
+            /* newMenu.addEventListener('animationend', function() {
                 navMobile.removeChild(newMenu);
-            });
+            }); */
             
     
             /* CLEAR MOBILE NAV  */
