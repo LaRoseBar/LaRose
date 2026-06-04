@@ -314,6 +314,12 @@ header .mobile-menu .disappearing {
 .drinks .drinks-section .rum .rum-items {
   margin: auto auto;
 }
+.drinks .drinks-section .rum .rum-items .items-heading-contaiter .heading {
+  position: static;
+  transform: none;
+  flex: 1;
+  text-align: center;
+}
 .drinks .drinks-section .rum .rum-items .list {
   grid-template-columns: 1fr;
   place-items: center;
@@ -952,9 +958,8 @@ header .mobile-menu .disappearing {
   }
   .shishas .shishas-section {
     margin-top: 50px;
-  }
-  .contact {
-    margin-bottom: 0;
+    flex-direction: column;
+    align-items: center;
   }
   .contact .contact-section .contact-line {
     display: block;
