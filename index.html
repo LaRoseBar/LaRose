@@ -13,14 +13,17 @@
         @media (max-width: 1125px){ .shishas{ margin-top: 0; } }
         @media (max-width: 830px){ .shishas{ margin-top: 20px; } }
         /* Hot Drinks: Glintwine on its own row, Tea as a subsection */
-        .hot-drinks-single{ grid-template-columns: 1fr; margin-bottom: 40px; }
+        .hot-drinks-single{ grid-template-columns: 1fr !important; margin-bottom: 40px !important; }
         .subheading{ font-size: 32px; font-weight: 600; text-align: center; margin: 0; }
-        /* Classic Cocktails: second list under the signature Cocktails */
-        .classic-cocktails-heading{ margin-top: 80px; }
+        /* Classic Cocktails and Hot Drinks: extra lists under the signature Cocktails */
+        .cocktails-subsection-heading{ margin-top: 80px; }
+        .hot-drinks-single .list-item-with-description{ width: 100% !important; }
+        /* Refreshings is shorter now: let its photo match the list height on wide screens */
+        @media (min-width: 1501px){ .drinks .drinks-section .refreshings img{ height: auto; contain: size; } }
         @media (max-width: 830px){
-            .hot-drinks-single{ margin-bottom: 24px; }
+            .hot-drinks-single{ margin-bottom: 24px !important; }
             .subheading{ font-size: 18px; text-align: start; }
-            .classic-cocktails-heading{ margin-top: 50px; }
+            .cocktails-subsection-heading{ margin-top: 50px; }
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -287,7 +290,7 @@
 
                             </div>
 
-                            <h3 class="heading classic-cocktails-heading">Classic Cocktails</h3>
+                            <h3 class="heading cocktails-subsection-heading">Classic Cocktails</h3>
                             <hr class="line-after-heading">
 
                             <div class="list">
@@ -355,6 +358,83 @@
                                     <div class="list-item-description-inner">
                                         <h5>Cosmopolitan</h5>
                                         <p>10€</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="heading cocktails-subsection-heading">Hot Drinks</h3>
+                            <hr class="line-after-heading">
+
+                            <div class="list hot-drinks-single">
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Glintwine</h5>
+                                        <p>8€</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="subheading">Tea</h4>
+
+                            <div class="list">
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Chamomile</h5>
+                                        <p>9€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Cherry</h5>
+                                        <p>9€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Peach Mint</h5>
+                                        <p>9€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Milk Oolong</h5>
+                                        <p>9€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Pu-Erh Tea</h5>
+                                        <p>9€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Caramel Oolong</h5>
+                                        <p>9€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Sea Buckthorn</h5>
+                                        <p>9€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Earl Grey</h5>
+                                        <p>9€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Mango Passion Fruit</h5>
+                                        <p>9€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Green Tea</h5>
+                                        <p>9€</p>
                                     </div>
                                 </div>
                             </div>
@@ -965,62 +1045,6 @@
                             </section>
 
 
-                            <section class="refreshings-items" style="margin-top: 32px;">
-                                <h3 class="heading">Hot Drinks</h3>
-                                <hr class="line-after-heading">
-
-                                <div class="list hot-drinks-single">
-                                    <div class="list-item">
-                                        <h5>Glintwine</h5>
-                                        <p>8€</p>
-                                    </div>
-                                </div>
-
-                                <h4 class="subheading">Tea</h4>
-
-                                <div class="list">
-                                    <div class="list-item">
-                                        <h5>Manzanilla</h5>
-                                        <p>9€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Cherry</h5>
-                                        <p>9€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Peach Mint</h5>
-                                        <p>9€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Milk Oolong</h5>
-                                        <p>9€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Pu-Erh Tea</h5>
-                                        <p>9€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Caramel Oolong</h5>
-                                        <p>9€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Sea Buckthorn</h5>
-                                        <p>9€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Earl Grey</h5>
-                                        <p>9€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Mango Passion Fruit</h5>
-                                        <p>9€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Green Tea</h5>
-                                        <p>9€</p>
-                                    </div>
-                                </div>
-                            </section>
                         </div>
 
                         <!-- RIGHT: image -->
