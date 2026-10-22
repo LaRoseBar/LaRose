@@ -12,6 +12,16 @@
         .shishas{ margin-top: 70px; }
         @media (max-width: 1125px){ .shishas{ margin-top: 0; } }
         @media (max-width: 830px){ .shishas{ margin-top: 20px; } }
+        /* Hot Drinks: Glintwine on its own row, Tea as a subsection */
+        .hot-drinks-single{ grid-template-columns: 1fr; margin-bottom: 40px; }
+        .subheading{ font-size: 32px; font-weight: 600; text-align: center; margin: 0; }
+        /* Classic Cocktails: second list under the signature Cocktails */
+        .classic-cocktails-heading{ margin-top: 80px; }
+        @media (max-width: 830px){
+            .hot-drinks-single{ margin-bottom: 24px; }
+            .subheading{ font-size: 18px; text-align: start; }
+            .classic-cocktails-heading{ margin-top: 50px; }
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -205,20 +215,6 @@
                                 </div>
                                 <div class="list-item-with-description">
                                     <div class="list-item-description-inner">
-                                        <h5>Jungle Rose</h5>
-                                        <p>12€</p>
-                                    </div>
-                                    <p>BOMBAY GIN, LIQUEUR BANANA, ORANGE, PINEAPPLE</p>
-                                </div>
-                                <div class="list-item-with-description">
-                                    <div class="list-item-description-inner">
-                                        <h5>Tiki Master</h5>
-                                        <p>14€</p>
-                                    </div>
-                                    <p>RUM BACARDI CARTA BLANCA, LIQUEUR BANANA, JÄGERMEISTER, PINEAPPLE, APPLE</p>
-                                </div>
-                                <div class="list-item-with-description">
-                                    <div class="list-item-description-inner">
                                         <h5>Fairy Tale</h5>
                                         <p>15€</p>
                                     </div>
@@ -233,24 +229,10 @@
                                 </div>
                                 <div class="list-item-with-description">
                                     <div class="list-item-description-inner">
-                                        <h5>Spain Sling</h5>
-                                        <p>12€</p>
-                                    </div>
-                                    <p>GIN, BÉNÉDICTINE, COINTREAU, MONIN CHERRY, PINEAPPLE JUICE, SOUR</p>
-                                </div>
-                                <div class="list-item-with-description">
-                                    <div class="list-item-description-inner">
                                         <h5>Bella Ciao</h5>
                                         <p>12€</p>
                                     </div>
                                     <p>GIN, DISARONNO, PASSION FRUIT, PINEAPPLE</p>
-                                </div>
-                                <div class="list-item-with-description">
-                                    <div class="list-item-description-inner">
-                                        <h5>Coco Borracho</h5>
-                                        <p>14€</p>
-                                    </div>
-                                    <p>BACARDI SPICED, PINA COLADA SYRUP</p>
                                 </div>
                                 <div class="list-item-with-description">
                                     <div class="list-item-description-inner">
@@ -261,20 +243,120 @@
                                 </div>
                                 <div class="list-item-with-description">
                                     <div class="list-item-description-inner">
-                                        <h5>Paloma</h5>
-                                        <p>13€</p>
-                                    </div>
-                                    <p>TEQUILA BLANCO, MARTINI FIERO, GRAPEFRUIT FRESH, GINGER ALE</p>
-                                </div>
-                                <div class="list-item-with-description">
-                                    <div class="list-item-description-inner">
                                         <h5>Amaretto Sour</h5>
                                         <p>13€</p>
                                     </div>
                                     <p>DIPLOMÁTICO, DISARONNO, ORANGE FRESH</p>
                                 </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Ruby Veil</h5>
+                                        <p>13€</p>
+                                    </div>
+                                    <p>BACARDI CARTA BLANCA, LICOR 43, PEACH LIQUEUR, LIME JUICE, RED WINE</p>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Hazelnut Affair</h5>
+                                        <p>13€</p>
+                                    </div>
+                                    <p>VODKA, FRANGELICO, BAILEYS, VANILLA SYRUP, CARAMEL SYRUP, LEMON JUICE</p>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Chambord Sour</h5>
+                                        <p>12€</p>
+                                    </div>
+                                    <p>CHAMBORD, VODKA, RASPBERRY SYRUP, LEMON JUICE, EGG WHITE, GRENADINE</p>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Cherry Kiss</h5>
+                                        <p>13€</p>
+                                    </div>
+                                    <p>BACARDI CARTA BLANCA, MARASCHINO LIQUEUR, AMARETTO, CHERRY SYRUP, LIME JUICE</p>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Rosa Picante</h5>
+                                        <p>14€</p>
+                                    </div>
+                                    <p>ANGOSTURA, TEQUILA, COINTREAU, MARTINI BITTER, CORONA, TABASCO</p>
+                                </div>
 
 
+                            </div>
+
+                            <h3 class="heading classic-cocktails-heading">Classic Cocktails</h3>
+                            <hr class="line-after-heading">
+
+                            <div class="list">
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Pornstar Martini</h5>
+                                        <p>12€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Espresso Martini</h5>
+                                        <p>12€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Margarita</h5>
+                                        <p>12€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Paloma</h5>
+                                        <p>12€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Sex On The Beach</h5>
+                                        <p>10€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Long Island</h5>
+                                        <p>12€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Whiskey Sour</h5>
+                                        <p>12€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Old Fashioned</h5>
+                                        <p>12€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Negroni</h5>
+                                        <p>12€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Moscow Mule</h5>
+                                        <p>10€</p>
+                                    </div>
+                                </div>
+                                <div class="list-item-with-description">
+                                    <div class="list-item-description-inner">
+                                        <h5>Cosmopolitan</h5>
+                                        <p>10€</p>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     
@@ -308,20 +390,7 @@
                                 </div>
                                 <div class="list-item-with-description">
                                     <div class="list-item-description-inner">
-                                        <h5>Virgin Cucumber</h5>
-                                        <p>9€</p>
-                                    </div>
-                                    <p>Cucumber, Mint</p>
-                                </div>
-                                <div class="list-item-with-description">
-                                    <div class="list-item-description-inner">
-                                        <h5>Lemonade (Mango,Passion Fruit,Cherry,Strawberry,Bubble Gum)</h5>
-                                        <p>9€</p>
-                                    </div>
-                                </div>
-                                <div class="list-item-with-description">
-                                    <div class="list-item-description-inner">
-                                        <h5>Classic Lemonade</h5>
+                                        <h5>Lemonade</h5>
                                         <p>9€</p>
                                     </div>
                                 </div>
@@ -895,49 +964,19 @@
                                 </div>
                             </section>
 
+
                             <section class="refreshings-items" style="margin-top: 32px;">
-                                <h3 class="heading">Lemonades</h3>
+                                <h3 class="heading">Hot Drinks</h3>
                                 <hr class="line-after-heading">
 
-                                <div class="list">
+                                <div class="list hot-drinks-single">
                                     <div class="list-item">
-                                        <h5>Pineapple Lychee</h5>
-                                        <p>10€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Vanilla Berries</h5>
-                                        <p>10€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Peach Iced Tea</h5>
-                                        <p>10€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Virgin Coco</h5>
-                                        <p>10€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Pineapple Strawberry</h5>
-                                        <p>10€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Mango Passion Fruit</h5>
-                                        <p>10€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Mango Strawberry</h5>
-                                        <p>10€</p>
-                                    </div>
-                                    <div class="list-item">
-                                        <h5>Cherry</h5>
-                                        <p>10€</p>
+                                        <h5>Glintwine</h5>
+                                        <p>8€</p>
                                     </div>
                                 </div>
-                            </section>
 
-                            <section class="refreshings-items" style="margin-top: 32px;">
-                                <h3 class="heading">Tea</h3>
-                                <hr class="line-after-heading">
+                                <h4 class="subheading">Tea</h4>
 
                                 <div class="list">
                                     <div class="list-item">
